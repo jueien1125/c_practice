@@ -1,17 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 int main(void){
-	
-	char *str = (char *) malloc(100);
-	strcpy(str,"hello");
-	free(str);
-	if(str!=NULL){
-		strcpy(str,"world");
-		printf(str);
-	}
-
-	system("pause");
-	return 0;
+	 
+int i;
+int a=2;
+for(i=0;i<5;i++){
+	printf("%d,",sum(a));
+}
+	return 1;
+}
+int sum(int a){
+	auto int c=0;
+	static int b =3;
+	c+=1;
+	b+=2;
+	return(a+b+c);
 }
 
 
