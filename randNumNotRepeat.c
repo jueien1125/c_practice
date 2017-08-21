@@ -2,10 +2,12 @@
 #include <stdlib.h>
 #include <time.h>
 #define SWAP(x,y,t) (t=x, x=y, y=t) 
+#include "bubble_sort.c"
 int main(void){
 	
 	
-int i,a[100],array[30];
+	
+	int i,a[100],sort[30];
     for(i=0 ; i<100 ; i++){
     	a[i]=i+1;
 	}
@@ -18,26 +20,15 @@ int i,a[100],array[30];
 	}
 	
 	for(i=0;i<30;i++){
-		array[i] = a[i];
+		sort[i] = a[i];
 	}
-	sort(array,30);
+	sort(sort,30);
 	
-	for(i=0;i<30;i++) printf("%d ",array[i]);
-	printf("\n");
+	
+	
+	for(i=0;i<30;i++) printf("%2d ",a[i]);
+
 	system("pause");
 	return 0;
 }
 
-void sort(int a[],int n){
-	int i,j,f,temp;
-	for(i=0;i<n;i++){
-		f=0;
-		for(j=0;j<n-i-1;j++){
-			if(a[j]>a[j+1]){
-				SWAP(a[j],a[j+1],temp);
-				f=1;
-			}
-		}
-		if(f==0)break;
-	}
-}
